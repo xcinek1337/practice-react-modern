@@ -1,6 +1,8 @@
 # [![](assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern
 
-> :speech_balloon: Jeśli oczekujesz informacji zwrotnej do napisanych przez Ciebie rozwiązań tzw. Code Review to zapraszam do :heart: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl).
+> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl).
+
+> :speech_balloon: Jeśli oczekujesz informacji zwrotnej do napisanych przez Ciebie rozwiązań w formie komentarzy do kodu tzw. Code Review to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl).
 
 &nbsp;
 
@@ -8,15 +10,13 @@ React ciągle się rozwija i usprawnia swoje działanie. Poznanie nowych, lepszy
 
 Przed przystąpniem do zadań powinieneś poznać:
 
--   narzędzia typu ESLint oraz Prettier
--   Context API, które ułatwie komunikację komponentów
--   Hooks czyli nowe rozwiązania dostepne w komponentach funkcyjnych, które pozwalają wykorzystywać funkcjonalność znaną z komponentów klasowych
+- narzędzia typu ESLint oraz Prettier
+- Context API, które ułatwie komunikację komponentów
+- Hooks czyli nowe rozwiązania dostepne w komponentach funkcyjnych, które pozwalają wykorzystywać funkcjonalność znaną z komponentów klasowych
 
 &nbsp;
 
 > :white_check_mark: Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy, aby przejść do następnych zagadnień :arrow_right:
-
-> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl).
 
 ## Jak wykonać zadania?
 
@@ -24,8 +24,8 @@ Jak pobierzemy pliki (o czym za chwilę) to należy realizować zadania zgodnie 
 
 Mamy dwie ścieżki dla pobrania plików:
 
--   Chcę od razu przejść do zadań
--   Mam już doświadczenie z GitHub-em i GIT-em
+- Chcę od razu przejść do zadań
+- Mam już doświadczenie z GitHub-em i GIT-em
 
 ### Chcę od razu przejść do zadań
 
