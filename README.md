@@ -1,7 +1,5 @@
 # [![](assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern
 
-> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl).
-
 > :speech_balloon: Jeśli oczekujesz informacji zwrotnej do napisanych przez Ciebie rozwiązań w formie komentarzy do kodu tzw. Code Review to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl).
 
 &nbsp;
@@ -15,6 +13,8 @@ Przed przystąpniem do zadań powinieneś poznać:
 - Hooks czyli nowe rozwiązania dostepne w komponentach funkcyjnych, które pozwalają wykorzystywać funkcjonalność znaną z komponentów klasowych
 
 &nbsp;
+
+> :warning: Jeśli potrzebujesz materiałów do zadań to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl).
 
 > :white_check_mark: Wykonanie każdego z zadań bez problemów będzie oznaczać, że jesteś gotowy, aby przejść do następnych zagadnień :arrow_right:
 

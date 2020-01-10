@@ -1,6 +1,6 @@
 # [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #04
 
-> Jeśli chciałbyś więcej tego typu zadań to zapraszam do :heart: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
 
 &nbsp;
 
@@ -18,9 +18,9 @@ Pierwszy element zwróconej tablicy to zmienna, która przechowuje wylosowany wy
 
 W state (`useState()`) będziemy musieli przechowywać co namniej kilka elementów:
 
--   tekst wpisywany w `<input />`
--   odliczany czas
--   ilość poprawnie wprowadzonych znaków
+- tekst wpisywany w `<input />`
+- odliczany czas
+- ilość poprawnie wprowadzonych znaków
 
 Odliczanie czasu będziemy wykonywać w momencie kiedy pole `<input />` jest aktywne oraz zatrzymywać kiedy przestało być aktywne. Oznacza to, że `setInterval()` powinien być uruchamiany w `onFocus`, a czyszczony w momencie `onBlur`. Aby przechowywać identyfikator interwalu użyj referencji tj. `useRef`.
 
@@ -28,4 +28,4 @@ W momencie zamontownaia (`useEffect()`) wygeneruj pierwsze słowo. Za kazdym raz
 
 &nbsp;
 
-> Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)
+> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)

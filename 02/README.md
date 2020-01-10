@@ -1,6 +1,6 @@
 # [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #02
 
-> Jeśli chciałbyś więcej tego typu zadań to zapraszam do :heart: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
 
 &nbsp;
 
@@ -14,4 +14,4 @@ Wartością, która przekazujesz do kontekstu jest `state.text` z `<App />`. Nat
 
 &nbsp;
 
-> Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)
+> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)

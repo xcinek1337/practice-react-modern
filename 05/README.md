@@ -1,6 +1,6 @@
 # [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #05
 
-> Jeśli chciałbyś więcej tego typu zadań to zapraszam do :heart: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
 
 &nbsp;
 
@@ -8,11 +8,11 @@ Stwórz formularz kontaktowy w pliku `./ContactForm.js`, który będzie można w
 
 Formularz powinien mieć przynajmniej kilka pól:
 
--   Imię i nazwisko (wymagane)
--   Edres email (wymagane)
--   Numer telefonu
--   Temat (wymagane)
--   Wiadomość (wymagane)
+- Imię i nazwisko (wymagane)
+- Edres email (wymagane)
+- Numer telefonu
+- Temat (wymagane)
+- Wiadomość (wymagane)
 
 Każde z pól powinno posiadać odpowiednią walidację, a użytkownik powinien zostać poinformowany o błędach.
 
@@ -28,4 +28,4 @@ Wszelkie dane wrażliwe umieść w pliku `./account.js`, który został dodany d
 
 &nbsp;
 
-> Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)
+> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)

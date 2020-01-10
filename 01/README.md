@@ -1,6 +1,6 @@
 # [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #01
 
-> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :heavy_dollar_sign: :heavy_dollar_sign: :heavy_dollar_sign: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
+> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
 
 &nbsp;
 
@@ -12,11 +12,11 @@ To oznacza, że musisz stworzyć odpowiednie pliki konfiguracyjne w katalogu gł
 
 Twoja konfguracja ma mieć określone zasady:
 
--   kod pisany zgodnie z regułami AirBnB ([JavaScript](https://github.com/airbnb/javascript), [React](https://airbnb.io/javascript/react/))
--   pliki JS mogą zawierać kod JSX
--   liczba spaci w odstępach to 4
--   maksymalna długość wiersza to 100 znaków
--   znak używany do oznaczania ciągu znaków to [apostrof](https://pl.wikipedia.org/wiki/Apostrof)
+- kod pisany zgodnie z regułami AirBnB ([JavaScript](https://github.com/airbnb/javascript), [React](https://airbnb.io/javascript/react/))
+- pliki JS mogą zawierać kod JSX
+- liczba spaci w odstępach to 4
+- maksymalna długość wiersza to 100 znaków
+- znak używany do oznaczania ciągu znaków to [apostrof](https://pl.wikipedia.org/wiki/Apostrof)
 
 Dodatkowo skonfiguruj swój IDE w taki sposób, aby podczas pisnaia kodu były podkreślane od razu błędy związane z odpowiednią strukturą kodu (w [VS Code](https://code.visualstudio.com/) rozwiązuje to rozszerzenie o nazwie `ESLint`).
 
