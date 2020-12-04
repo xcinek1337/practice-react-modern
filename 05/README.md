@@ -20,7 +20,8 @@ Postaraj się użyć `useReduce()` do zarządzania polami formularza.
 
 ## Zadanie dodatkowe
 
-Jeśli cały formularz został prawidłowo wypełniony to możesz wykorzystać jedno z API do wysłania wiadomości przy pomocy [fetch()](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch), które zostały opisane w [tym artykule](https://blog.mailtrap.io/javascript-send-email/).
+Jeśli cały formularz został prawidłowo wypełniony to możesz wykorzystać jedno z API do wysłania wiadomości, które zostały opisane w [tym artykule](https://blog.mailtrap.io/javascript-send-email/).
+> **Uwaga!** Od jakiegoś czasu SmtpJS ma problemy i nie zawsze działa prawidłowo. Dlatego rekomenduję narzędzie EmialJS w darmowym planie.
 
 Nie ufałbym jednak do końca tym rozwiązaniom ponieważ przesyłamy tam hasło do naszej skrzynki. Do celów edukacyjnych proponuję utworzyć testowe konto pocztowe i próbować je skonfigurować.
 
