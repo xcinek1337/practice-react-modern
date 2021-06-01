@@ -1,10 +1,11 @@
-# [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #01
-
-> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
-
+> :star: *Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `s2e04-react-modern` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/)). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/).*
+> 
 &nbsp;
 
-Pierwszym Twoim zadaniem będzie konfiguracja [ESLint](https://eslint.org/)-a oraz [Prettier](https://prettier.io/)-a tak, aby ze soba współpracowały.
+# `#01` React: Nowoczesny
+
+
+Pierwszym Twoim zadaniem będzie konfiguracja [ESLint](https://eslint.org/)a oraz [Prettier](https://prettier.io/)a tak, aby ze soba współpracowały.
 
 Konfiguracja powinna być wykonana w taki sposób, aby każdy z potencjalnych członków Twojego zespołu pisał kod zgodnie z ustalonymi regułami oraz był on w ten sam sposób formatowany.
 
@@ -30,7 +31,7 @@ Jak już to wszystko zrobisz i uruchomisz kod to postaraj sie naprawić błędy 
 
 ## Webpack
 
-W pliku `./webpack.config.js` (w katalogu głównym) znajdziesz gotową konfigurację Webpack-a dla React. Znajduje się tam zmienna `taskNumber`, która przechwowuje informacje o zadaniu, które w danym momencie przerabiasz.
+W pliku `./webpack.config.js` (w katalogu głównym) znajdziesz gotową konfigurację Webpacka dla React. Znajduje się tam zmienna `taskNumber`, która przechwowuje informacje o zadaniu, które w danym momencie przerabiasz.
 
 Za każdym razem będziesz musiał modyfikować zawartość tej zmiennej i ponownie uruchamiać tryb developerski. Pamiętasz jak to zrobić? Gdzie zapisany jest skrót do odpowiedniej komendy?
 
@@ -38,4 +39,4 @@ Pamiętaj również, że musimy mieć pobrane paczki z npm, które będziemy wyk
 
 &nbsp;
 
-> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)
+> :arrow_left: ~~*poprzednie zadanie*~~ | [*następne zadanie*](./../02) :arrow_right:
