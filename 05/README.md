@@ -2,7 +2,7 @@
 > 
 &nbsp;
 
-# `#04` React: Nowoczesny
+# `#05` React: Nowoczesny
 
 
 Stwórz formularz kontaktowy w pliku `./ContactForm.js`, który będzie można wykorzystać w wielu projektach. Komponent ten ma być tworzony przy pomocy funkcji, a pola formularza mają być kontrolowane przez `state`.
