@@ -1,8 +1,9 @@
-# [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #05
-
-> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
-
+> :star: *Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `s2e04-react-modern` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/)). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/).*
+> 
 &nbsp;
+
+# `#04` React: Nowoczesny
+
 
 Stwórz formularz kontaktowy w pliku `./ContactForm.js`, który będzie można wykorzystać w wielu projektach. Komponent ten ma być tworzony przy pomocy funkcji, a pola formularza mają być kontrolowane przez `state`.
 
@@ -21,7 +22,7 @@ Postaraj się użyć `useReduce()` do zarządzania polami formularza.
 ## Zadanie dodatkowe
 
 Jeśli cały formularz został prawidłowo wypełniony to możesz wykorzystać jedno z API do wysłania wiadomości, które zostały opisane w [tym artykule](https://blog.mailtrap.io/javascript-send-email/).
-> **Uwaga!** Od jakiegoś czasu SmtpJS ma problemy i nie zawsze działa prawidłowo. Dlatego rekomenduję narzędzie EmialJS w darmowym planie.
+> **Uwaga!** Od jakiegoś czasu SmtpJS ma problemy i nie zawsze działa prawidłowo. Dlatego rekomenduję narzędzie EmailJS w darmowym planie.
 
 Nie ufałbym jednak do końca tym rozwiązaniom ponieważ przesyłamy tam hasło do naszej skrzynki. Do celów edukacyjnych proponuję utworzyć testowe konto pocztowe i próbować je skonfigurować.
 
@@ -29,4 +30,4 @@ Wszelkie dane wrażliwe umieść w pliku `./account.js`, który został dodany d
 
 &nbsp;
 
-> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)
+> :arrow_left: [*poprzednie zadanie*](./../04) | ~~*następne zadanie*~~ :arrow_right:
