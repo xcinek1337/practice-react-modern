@@ -1,8 +1,8 @@
-# [![](../assets/img/logo-readme2.jpg)](https://devmentor.pl) &nbsp; React modern #04
-
-> :loudspeaker: Jeśli chciałbyś więcej tego typu zadań to zapraszam do :moneybag: [wsparcia mojego konta](https://github.com/sponsors/devmentor-pl)!
-
+> :star: *Jeśli będziesz mieć problem z rozwiązaniem tego zadania, poproś o pomoc na odpowiednim kanale na Slacku, tj. `s2e04-react-modern` (dotyczy [mentee](https://devmentor.pl/mentoring-javascript/)). Pamiętaj, aby treść Twojego wpisu spełniała [odpowiednie kryteria](https://devmentor.pl/jak-prosic-o-pomoc/).*
+> 
 &nbsp;
+
+# `#04` React: Nowoczesny
 
 Twoim zdaniem będzie napisanie komponentu `<SpeedTest />` który będzie obliczać szybkość pisania na klawiaturze. Działać ma to w taki sposób, że pokazujemy użytkownikowi wyraz, który ma zostać wpisany do pola formularza. W momencie wpisywania zliczamy czas jaki upłyną, jeśli wyraz został poprawnie wpisany w całości to zapisujemy jego długość oraz wyświetlamy kolejny (pamiętajmy o wyczyszczeniu pola `<input />`).
 
@@ -28,4 +28,4 @@ W momencie zamontownaia (`useEffect()`) wygeneruj pierwsze słowo. Za kazdym raz
 
 &nbsp;
 
-> :warning: Jeśli nie posiadasz materiałów do tego zadania to znajdziesz je na stronie :books: [devmentor.pl](https://devmentor.pl)
+> :arrow_left: [*poprzednie zadanie*](./../03) | [*następne zadanie*](./../05) :arrow_right:
