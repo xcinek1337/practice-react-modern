@@ -5,17 +5,19 @@
 # `#03` React: Nowoczesny
 
 
-Tym razem znajdziesz w pliku `./context.js` utworzone dwa konteksty. Jeden dotyczy tekstu, drugi koloru.
+Tym razem w pliku `./context.js` znajdziesz dwa konteksty. Jeden dotyczy tekstu, drugi koloru.
 
-Obie wartości masz wykorzystać w komponencie `<Div>` jako tytułu dla `<h1>` oraz kolor obramowania dla `<div>`.
+Obie wartości masz wykorzystać w komponencie `<Div>`: pierwszą jako tytuł w `<h1>`, drugą – jako kolor obramowania dla `<div>`.
 
-Jednak musisz zrobić to w taki sposób, aby wartości domyślne były zaczytane przy zagnieżdzonym elemencie w `<Box>`. Natomiast dla komponentu `<Div>`, który jest renderowany przy `<Box>` (jako rodzeństwo) została nastawiona treść dla `TextContext` na `sibling`.
+Zadanie wykonaj w taki sposób, aby:
+-  `<Div>` będący dzieckiem `<Box>` otrzymał wartości domyślne
+-  `<Div>`, który jest rodzeństwem `<Box>`, otrzymał przez `TextContext` wartość `sibling`.
 
 Efekt końcowy:
 ```
 <section>
-    <Box /> // => <div style="border: 1px solid red"><h1>nested</h1> ... </div>
-    <Div /> // => <div style="border: 1px solid red"><h1>sibling</h1> ...</div>
+    <div style="border: 1px solid red"><h1>nested</h1> ... </div> // wyrenderowany przez <Box />
+    <div style="border: 1px solid red"><h1>sibling</h1> ...</div> // wyrenderowany przez <Div />
 </section>
 ```
 &nbsp;
