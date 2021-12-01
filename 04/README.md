@@ -4,27 +4,36 @@
 
 # `#04` React: Nowoczesny
 
-Twoim zdaniem będzie napisanie komponentu `<SpeedTest />` który będzie obliczać szybkość pisania na klawiaturze. Działać ma to w taki sposób, że pokazujemy użytkownikowi wyraz, który ma zostać wpisany do pola formularza. W momencie wpisywania zliczamy czas jaki upłyną, jeśli wyraz został poprawnie wpisany w całości to zapisujemy jego długość oraz wyświetlamy kolejny (pamiętajmy o wyczyszczeniu pola `<input />`).
+Twoim zdaniem jest napisanie komponentu `<SpeedTest />`, który będzie obliczać szybkość pisania na klawiaturze.
 
-Komponent ma być napisany w formie funkcyjnej więc będziesz musiał użyć hook-ów do utworzenia logiki działania twojego komponentu.
+Ma to działać w następujący sposób:
+- pokazujemy użytkownikowi wyraz, który ma zostać wpisany do pola formularza
+- zliczanie czasu rozpoczynamy w momencie, w którym użytkownik ustawia kursor w inpucie
+- jeśli wyraz został wpisany poprawnie, to:
+	- zapisujemy jego długość
+	- wyświetlamy kolejny wyraz (pamiętajmy o wyczyszczeniu pola `<input />`).
 
-Zacznij od zapoznania się z plikiem `./hook.js`, który zawiera rozwiązanie, które pozwoli Ci losować podane przez parametr ciągi znaków w formie tablicy np.
+`<SpeedTest />` ma być komponentem funkcyjnym, więc musisz użyć hooków do utworzenia logiki działania.
+
+Zacznij od zapoznania się z plikiem `./hook.js` – jest tam customowy hook, które pozwoli Ci losować ciągi znaków spośród tych podanych przez parametr w formie tablicy, np.
 
 ```
 const [word, regenerateWord] = useRandomItem(['devmentor.pl', 'abc', 'JavaScript']);
 ```
 
-Pierwszy element zwróconej tablicy to zmienna, która przechowuje wylosowany wyraz. Aby wylosować wyraz z podanej tablicy należy wywołać drugi parametr który jest funkcją tj. `regenerateWord()`.
+Pierwszy element zwróconej tablicy (`[state,  randomItem]`) to zmienna, która przechowuje wylosowany wyraz. Drugi to funkcja, którą wywołasz, aby wylosować wyraz z przekazanej przez parametr tablicy z ciągami znaków.
 
-W state (`useState()`) będziemy musieli przechowywać co namniej kilka elementów:
+Zauważ, że w przypadku destrukturyzacji tablic możemy nadawać zmiennym własne nazwy, ponieważ liczy się tu kolejność elementów, a nie nazwa (jak w przypadku nazwy klucza w obiektach). W tym rozwiązaniu zdecydowałem się więc na `[word, regenerateWord]`.
+
+W stanie (`useState()`) będziemy musieli przechowywać co najmniej kilka elementów:
 
 - tekst wpisywany w `<input />`
 - odliczany czas
-- ilość poprawnie wprowadzonych znaków
+- łączną liczbę znaków wszystkich poprawnie wpisanych słów.
 
-Odliczanie czasu będziemy wykonywać w momencie kiedy pole `<input />` jest aktywne oraz zatrzymywać kiedy przestało być aktywne. Oznacza to, że `setInterval()` powinien być uruchamiany w `onFocus`, a czyszczony w momencie `onBlur`. Aby przechowywać identyfikator interwalu użyj referencji tj. `useRef`.
+Odliczanie czasu uruchomimy w momencie, w którym pole `<input />` zostanie aktywowane i zatrzymamy, kiedy przestanie być aktywne. Oznacza to, że `setInterval()` powinien być uruchamiany w momencie wydarzenia `onFocus`, a czyszczony na `onBlur`. Aby przechowywać identyfikator interwału, użyj referencji, tj. `useRef()`.
 
-W momencie zamontownaia (`useEffect()`) wygeneruj pierwsze słowo. Za kazdym razem, gdy zostanie wprowadzony jakiś tekst do pola `<input />` (też `useEffect(() => {...}, [text])` ) sprawdzaj czy wprowadzony tekst jest równy wylosowanemu wyrazowi.
+W momencie zamontowania komponentu (`useEffect()`), wygeneruj pierwsze słowo. Za każdym razem, gdy do pola `<input />` zostanie wprowadzony jakiś tekst, sprawdzaj, czy jest on równy wylosowanemu wyrazowi (`useEffect(() => {...}, [text])`).
 
 &nbsp;
 
