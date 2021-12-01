@@ -5,13 +5,13 @@
 # `#02` React: Nowoczesny
 
 
-Zapoznaj się dokładnie z plikami, które znajdziesz w katalogu `components`.
+Zapoznaj się dokładnie z plikami w katalogu `components`.
 
-Znajdziesz tam już gotowe rozwiązanie, w którym dane są przekazywane przez `props`.
+Znajdziesz tam gotowe rozwiązanie, w którym dane są przekazywane przez `props`. 
 
-Zmodyfikuj to rozwiązanie przy pomocy Context API, aby nie musieć tego robić. Zdefinuj plik `./context.js`, w którym będziesz tworzyć kontekst. Następnie importuj go w odpowiednich miejscach.
+Zmodyfikuj je przy pomocy Context API, aby ograniczyć korzystanie z propsów. Zdefiniuj plik `./context.js`, w którym stworzysz kontekst. Następnie zaimportuj go w odpowiednich miejscach.
 
-Wartością, która przekazujesz do kontekstu jest `state.text` z `<App />`. Natomiast miejscem docelowym będzie `<Div />`.
+Wartością, którą przekażesz do kontekstu jest `state.text` z `<App />`. Natomiast miejscem docelowym jest `<Div />`.
 
 &nbsp;
 
