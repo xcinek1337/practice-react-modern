@@ -4,13 +4,13 @@
 
 # React: Nowoczesny
 
-React ciągle się rozwija i usprawnia swoje działanie. Poznanie nowych, lepszych rozwiązań jest cześcią pracy programisty. Wyzwania dostępne w tym repozytorium mają za zadanie sprawdzić, czy znasz odpowiednie narzędzia oraz czy potrafisz wykorzystać nowe i wygodne rozwiązania dostępne w React.
+React ciągle się rozwija i usprawnia swoje działanie. Poznawanie nowych, lepszych rozwiązań jest częścią pracy programisty. Dzięki zadaniom z tego repozytorium sprawdzisz, czy znasz odpowiednie narzędzia oraz czy potrafisz wykorzystywać nowe, wygodne rozwiązania dostępne w Reakcie.
 
-Przed przystąpniem do zadań powinieneś poznać:
+Przed przystąpieniem do zadań powinieneś poznać:
 
 - narzędzia typu ESLint oraz Prettier
-- Context API, które ułatwie komunikację komponentów
-- Hooks czyli nowe rozwiązania dostepne w komponentach funkcyjnych, które pozwalają wykorzystywać funkcjonalność znaną z komponentów klasowych
+- Context API, które ułatwia komunikację komponentów
+- hooks, czyli nowe rozwiązania, które pozwalają wykorzystywać funkcjonalność znaną z komponentów klasowych w komponentach funkcyjnych.
 
 &nbsp;
 
