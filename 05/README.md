@@ -5,28 +5,28 @@
 # `#05` React: Nowoczesny
 
 
-Stwórz formularz kontaktowy w pliku `./ContactForm.js`, który będzie można wykorzystać w wielu projektach. Komponent ten ma być tworzony przy pomocy funkcji, a pola formularza mają być kontrolowane przez `state`.
+W pliku `./ContactForm.js` stwórz formularz kontaktowy, który będzie można wykorzystać w wielu projektach. Komponent napisz przy pomocy funkcji. Pola formularza mają być kontrolowane przez `state`.
 
 Formularz powinien mieć przynajmniej kilka pól:
 
-- Imię i nazwisko (wymagane)
-- Edres email (wymagane)
-- Numer telefonu
-- Temat (wymagane)
-- Wiadomość (wymagane)
+- imię i nazwisko (wymagane)
+- adres e-mail (wymagane)
+- numer telefonu
+- temat (wymagane)
+- wiadomość (wymagane)
 
-Każde z pól powinno posiadać odpowiednią walidację, a użytkownik powinien zostać poinformowany o błędach.
+Każde z pól ma być walidowane, a użytkownik powinien zostać poinformowany o błędach.
 
 Postaraj się użyć `useReduce()` do zarządzania polami formularza.
 
 ## Zadanie dodatkowe
 
-Jeśli cały formularz został prawidłowo wypełniony to możesz wykorzystać jedno z API do wysłania wiadomości, które zostały opisane w [tym artykule](https://blog.mailtrap.io/javascript-send-email/).
+Jeśli cały formularz został prawidłowo wypełniony, możesz wykorzystać [jedno z API](https://blog.mailtrap.io/javascript-send-email/) do wysłania wiadomości.
 > **Uwaga!** Od jakiegoś czasu SmtpJS ma problemy i nie zawsze działa prawidłowo. Dlatego rekomenduję narzędzie EmailJS w darmowym planie.
 
-Nie ufałbym jednak do końca tym rozwiązaniom ponieważ przesyłamy tam hasło do naszej skrzynki. Do celów edukacyjnych proponuję utworzyć testowe konto pocztowe i próbować je skonfigurować.
+Nie ufałbym jednak do końca tym rozwiązaniom, ponieważ przesyłamy tam hasło do swojej skrzynki. Do celów edukacyjnych proponuję utworzyć testowe konto pocztowe i spróbować je skonfigurować.
 
-Wszelkie dane wrażliwe umieść w pliku `./account.js`, który został dodany do pliku `.gitignore` dzięki czemu nie zostanie on przesłany do repozytoirum. To zapobiegnie przechwyceniu Twojej skrzynki pocztowej ;)
+Wszelkie dane wrażliwe umieść w pliku `./account.js` i dodaj ten plik do `.gitignore`. Dzięki temu nie zostanie on przesłany do repozytorium, a Twoja skrzynka pocztowa – przechwycona.
 
 &nbsp;
 
