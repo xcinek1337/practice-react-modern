@@ -5,37 +5,37 @@
 # `#01` React: Nowoczesny
 
 
-Pierwszym Twoim zadaniem będzie konfiguracja [ESLint](https://eslint.org/)a oraz [Prettier](https://prettier.io/)a tak, aby ze soba współpracowały.
+Pierwszym Twoim zadaniem będzie konfiguracja [ESLinta](https://eslint.org/) oraz [Prettiera](https://prettier.io/) tak, aby ze sobą współpracowały.
 
-Konfiguracja powinna być wykonana w taki sposób, aby każdy z potencjalnych członków Twojego zespołu pisał kod zgodnie z ustalonymi regułami oraz był on w ten sam sposób formatowany.
+Konfiguracja powinna umożliwiać potencjalnym członkom Twojego zespołu pisanie kodu zgodnie z ustalonymi regułami i automatyczne formatowanie go w ten sam sposób.
 
-To oznacza, że musisz stworzyć odpowiednie pliki konfiguracyjne w katalogu głównym, które będą wykorzystywane przez członków zespołu (konfiguracja tylko IDE się nie sprawdza, bo każdy może posiadać inną).
+To oznacza, że musisz stworzyć odpowiednie pliki konfiguracyjne w katalogu głównym, które będą wykorzystywane przez członków zespołu (konfiguracja samego IDE się nie sprawdza, bo każdy może mieć inną).
 
-Twoja konfguracja ma mieć określone zasady:
+Twoja konfiguracja ma mieć określone zasady:
 
-- kod pisany zgodnie z regułami AirBnB ([JavaScript](https://github.com/airbnb/javascript), [React](https://airbnb.io/javascript/react/))
+- kod jest pisany zgodnie z regułami AirBnB ([JavaScript](https://github.com/airbnb/javascript), [React](https://airbnb.io/javascript/react/))
 - pliki JS mogą zawierać kod JSX
-- liczba spaci w odstępach to 4
+- liczba spacji w odstępach to 4
 - maksymalna długość wiersza to 100 znaków
-- znak używany do oznaczania ciągu znaków to [apostrof](https://pl.wikipedia.org/wiki/Apostrof)
+- znak używany do oznaczania ciągu znaków to [apostrof](https://pl.wikipedia.org/wiki/Apostrof).
 
-Dodatkowo skonfiguruj swój IDE w taki sposób, aby podczas pisnaia kodu były podkreślane od razu błędy związane z odpowiednią strukturą kodu (w [VS Code](https://code.visualstudio.com/) rozwiązuje to rozszerzenie o nazwie `ESLint`).
+Dodatkowo skonfiguruj swoje IDE w taki sposób, aby podczas pisania kodu od razu były podkreślane błędy związane z odpowiednią strukturą kodu (w VS Code rozwiązuje to [rozszerzenie ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)).
 
-Równocześnie przy zapisie pliku, wszystkie możliwe błędy były korygowane przez ESLint-a, a przez Prettier-a (w [VS Code](https://code.visualstudio.com/) to rozszerzenie o nazwie `Prettier - Code formater`) odpowiednio formatowane.
+Natomiast przy zapisie pliku wszystkie możliwe błędy powinny być korygowane przez ESLinta, a kod odpowiednio formatowany przez Prettiera (w VS Code to [rozszerzenie Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)).
 
-Pamiętaj, aby dodać do konfiguracji webpack-a [odpowiedni loader](https://github.com/webpack-contrib/eslint-loader), który będzie uruchamiał ESLint-a przy każdej zmianie pliku o rozszerzeniu `.js`.
+Pamiętaj, aby dodać do konfiguracji webpacka [odpowiedni loader](https://github.com/webpack-contrib/eslint-loader), który będzie uruchamiał ESLinta przy każdej zmianie pliku o rozszerzeniu `.js`.
 
-W przedstawionym rozwiązaniu korzystamy z inicjalizatora właściwości, dzięki któremu definujemy `state` poza konstruktorem dlatego musisz jeszcze użyć [babel-eslint](https://github.com/babel/babel-eslint) jako parsera z odpowiednią konfiguracją.
+W przedstawionym rozwiązaniu korzystamy z inicjalizatora właściwości, dzięki któremu definiujemy `state` poza konstruktorem, dlatego jako parsera musisz jeszcze użyć [babel-eslint](https://github.com/babel/babel-eslint) z odpowiednią konfiguracją.
 
-Jak już to wszystko zrobisz i uruchomisz kod to postaraj sie naprawić błędy zgodnie z informacją z terminala.
+Jak już to wszystko zrobisz i uruchomisz kod, postaraj się naprawić błędy zgodnie z informacją z terminala.
 
 ## Webpack
 
-W pliku `./webpack.config.js` (w katalogu głównym) znajdziesz gotową konfigurację Webpacka dla React. Znajduje się tam zmienna `taskNumber`, która przechwowuje informacje o zadaniu, które w danym momencie przerabiasz.
+W pliku `./webpack.config.js` (w katalogu głównym) mieści się gotowa konfiguracja webpacka dla Reacta. Znajduje się tam zmienna `taskNumber` przechowująca informację o zadaniu, które w danym momencie przerabiasz.
 
-Za każdym razem będziesz musiał modyfikować zawartość tej zmiennej i ponownie uruchamiać tryb developerski. Pamiętasz jak to zrobić? Gdzie zapisany jest skrót do odpowiedniej komendy?
+Za każdym razem będziesz musiał modyfikować zawartość tej zmiennej (np. `const  taskNumber  =  '01';`) i ponownie uruchamiać tryb developerski. Pamiętasz, jak to zrobić? Gdzie zapisany jest skrót do odpowiedniej komendy?
 
-Pamiętaj również, że musimy mieć pobrane paczki z npm, które będziemy wykorzystywać podczas pracy z React. Wiesz jak je zainstalować?
+Pamiętaj również, żeby pobrać paczki z npm, które będziemy wykorzystywać podczas pracy z Reactem. Wiesz, jak je zainstalować?
 
 &nbsp;
 
