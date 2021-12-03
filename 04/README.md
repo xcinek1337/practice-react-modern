@@ -35,6 +35,8 @@ Odliczanie czasu uruchomimy w momencie, w którym pole `<input />` zostanie akty
 
 W momencie zamontowania komponentu (`useEffect()`), wygeneruj pierwsze słowo. Za każdym razem, gdy do pola `<input />` zostanie wprowadzony jakiś tekst, sprawdzaj, czy jest on równy wylosowanemu wyrazowi (`useEffect(() => {...}, [text])`).
 
+Jeśli chodzi o pozostałe funkcjonalności i sposób interakcji z użytkownikiem – masz dowolność. Możesz np. zdecydować o wyświetlaniu wyniku danej rundy, sposobie resetowania „rozgrywki” lub umożliwić użytkownikowi wprowadzanie czasu rundy czy ilości słów, które się wyświetlą.
+
 &nbsp;
 
 > :arrow_left: [*poprzednie zadanie*](./../03) | [*następne zadanie*](./../05) :arrow_right:
