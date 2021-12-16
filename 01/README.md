@@ -23,9 +23,9 @@ Dodatkowo skonfiguruj swoje IDE w taki sposób, aby podczas pisania kodu od razu
 
 Natomiast przy zapisie pliku wszystkie możliwe błędy powinny być korygowane przez ESLinta, a kod odpowiednio formatowany przez Prettiera (w VS Code to [rozszerzenie Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)).
 
-Pamiętaj, aby dodać do konfiguracji webpacka [odpowiedni loader](https://github.com/webpack-contrib/eslint-loader), który będzie uruchamiał ESLinta przy każdej zmianie pliku o rozszerzeniu `.js`.
+Pamiętaj, aby dodać do konfiguracji webpacka [odpowiedni plugin](https://webpack.js.org/plugins/eslint-webpack-plugin/), który będzie uruchamiał ESLinta przy każdej zmianie w pliku.
 
-W przedstawionym rozwiązaniu korzystamy z inicjalizatora właściwości, dzięki któremu definiujemy `state` poza konstruktorem, dlatego jako parsera musisz jeszcze użyć [babel-eslint](https://github.com/babel/babel-eslint) z odpowiednią konfiguracją.
+W przedstawionym rozwiązaniu korzystamy z inicjalizatora właściwości, dzięki któremu definiujemy `state` poza konstruktorem, dlatego jako parsera musisz jeszcze użyć [@babel/eslint-parser](https://www.npmjs.com/package/@babel/eslint-parser) z odpowiednią konfiguracją.
 
 Jak już to wszystko zrobisz i uruchomisz kod, postaraj się naprawić błędy zgodnie z informacją z terminala.
 

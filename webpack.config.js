@@ -1,4 +1,4 @@
-const taskNumber = "05";
+const taskNumber = "01";
 // numer przerabianego zadania
 
 const path = require("path");
@@ -8,6 +8,8 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: `./${taskNumber}/app.js`,
   // definiuje plik wejściowy
+  mode: 'development',
+    // definiuję tryb działania
   output: {
     path: path.resolve(__dirname, "build"),
     // definiuje ścieżką wyjściową
