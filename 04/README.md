@@ -37,6 +37,9 @@ W momencie zamontowania komponentu (`useEffect()`), wygeneruj pierwsze słowo. Z
 
 Jeśli chodzi o pozostałe funkcjonalności i sposób interakcji z użytkownikiem – masz dowolność. Możesz np. zdecydować o wyświetlaniu wyniku danej rundy, sposobie resetowania „rozgrywki” lub umożliwić użytkownikowi wprowadzanie czasu rundy czy ilości słów, które się wyświetlą.
 
+### ESLint – exhaustive-deps
+W tym zadaniu możesz napotkać problem ze strony ESLinta: `exhaustive-deps`. Nie musisz się w tej chwili nim przehmować. O tym, skąd biorą się błędy związane z tą regułą i jak sobie z nimi radzić przeczytasz w artykule [„Understanding the exhaustive-deps Eslint rule in React”](https://bobbyhadz.com/blog/react-hooks-exhaustive-deps).
+
 &nbsp;
 
 > :arrow_left: [*poprzednie zadanie*](./../03) | [*następne zadanie*](./../05) :arrow_right:
