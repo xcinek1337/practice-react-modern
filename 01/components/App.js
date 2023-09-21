@@ -3,9 +3,12 @@ import React from 'react';
 import Clock from './Clock';
 
 class App extends React.Component {
-    state = {
-        date: new Date(),
-    };
+    constructor() {
+        super();
+        this.state = {
+            date: new Date(),
+        };
+    }
 
     componentDidMount() {
         this.intervalId = setInterval(() => {
