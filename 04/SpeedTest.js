@@ -36,10 +36,6 @@ const SpeedTest = () => {
         setIntervalId(id);
     };
 
-    const appStop = () => {
-        clearInterval(intervalId);
-    };
-
     const plainSeconds = Math.floor(seconds / 10);
 
     useEffect(() => {
@@ -49,7 +45,7 @@ const SpeedTest = () => {
             setInputValue('');
         }
         if (correctWordsCount === 3) {
-            appStop();
+            clearInterval(intervalId);
         }
     });
 
