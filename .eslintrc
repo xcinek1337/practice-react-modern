@@ -1,5 +1,10 @@
 {
-    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+        "parser": "@babel/eslint-parser",
+        //musialem to dodac bo w kazdym komponencie wyrzucalo mi blad babel parser
+        //Parsing error: No Babel config file detected Either disable config file checking with requireConfigFile: false, or configure Babel so that it can find the config files.eslin
+        "requireConfigFile": false
+    },
     "extends": ["airbnb", "prettier"],
     "rules": {
         "react/jsx-filename-extension": [
@@ -16,16 +21,6 @@
     "globals": {
         "window": true,
         "document": true
-    },
-    "parserOptions": {
-        "requireConfigFile": false
-    },
-    "overrides": [
-        {
-            "files": ["**/*.js"],
-            "rules": {
-                "react/no-unused-class-component-methods": "off"
-            }
-        }
-    ]
+    }
 }
+
