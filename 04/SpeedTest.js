@@ -42,32 +42,35 @@ const SpeedTest = () => {
 
     const plainSeconds = Math.floor(seconds / 10);
 
-    const processingApp = (e) => {
-        if (e.key === 'Enter' && inputValue === word) {
+    useEffect(() => {
+        if (inputValue === word) {
             regenerateWord();
             setCorrectWordsCount((count) => count + 1);
             setInputValue('');
         }
-    };
-
-    useEffect(() => {
         if (correctWordsCount === 3) {
             appStop();
         }
     });
 
+    const restartTheGame = () => {
+        setCorrectWordsCount(0);
+        setSeconds(0);
+        setInputValue('');
+        setMilliseconds(0);
+    };
+
     return (
         <div>
             <h1>{word}</h1>
-            <input
-                onFocus={appRunning}
-                value={inputValue}
-                onChange={capturing}
-                onKeyDown={processingApp}
-            />
+            <input onFocus={appRunning} value={inputValue} onChange={capturing} />
             <p>
                 Czas: {plainSeconds}:{milliseconds}
             </p>
+
+            <button onClick={restartTheGame} type="button">
+                once again!
+            </button>
         </div>
     );
 };
