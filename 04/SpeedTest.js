@@ -2,7 +2,15 @@ import React, { useEffect, useState } from 'react';
 import useRandomItem from './hook';
 
 const SpeedTest = () => {
-    const [word, regenerateWord] = useRandomItem(['devmentor.pl', 'abc', 'JavaScript']);
+    const [word, regenerateWord] = useRandomItem([
+        'devmentor.pl',
+        'abc',
+        'JavaScript',
+        'ok',
+        'i',
+        'pull',
+        'up',
+    ]);
     const [correctWordsCount, setCorrectWordsCount] = useState(0);
 
     const [intervalId, setIntervalId] = useState(null);
@@ -27,7 +35,7 @@ const SpeedTest = () => {
         }, 100);
         setIntervalId(id);
     };
-   
+
     const appStop = () => {
         clearInterval(intervalId);
     };
@@ -36,6 +44,7 @@ const SpeedTest = () => {
 
     const processingApp = (e) => {
         if (e.key === 'Enter' && inputValue === word) {
+            regenerateWord();
             setCorrectWordsCount((count) => count + 1);
             setInputValue('');
         }
