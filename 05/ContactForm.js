@@ -46,11 +46,11 @@ const ContactForm = () => {
     };
 
     const reducer = (state, { name, value }) => {
-        // tutaj tworze obiekt kopiujac stary state i dodaje aktualizuje pola o nowe value(jesli sie zmienia, a  wiemy ze sie zmienai bo funkcja sie wykonuje XD)
+        // tutaj tworze obiekt kopiujac stary state i dodaje aktualizuje pola o nowe value(jesli sie zmienia, a  wiemy ze sie zmienai bo onChange wywolalo wlasnie te  funkcje)
         const newState = { ...state, [name]: value };
-        // tutaj waliduje pola wg potrzeb w validateFields i jednoczesnie dodaje nowy klucz errors ktory moze przechowywac bledy walidacji
+        // tutaj waliduje pola wg potrzeb w validateFields i jednoczesnie dodaje nowy klucz errors do state ktory moze przechowywac bledy walidacji
         newState.errors = validateFields(newState);
-        // zwracam newState, ktory bedzie state dla useReducera v
+        // zwracam newState, ktory bedzie state'm dla useReducera v
         return newState;
     };
 
@@ -60,7 +60,7 @@ const ContactForm = () => {
     const submit = (e) => {
         e.preventDefault();
 
-        // Wywołaj funkcję walidacji pól
+        
         const updatedErrors = validateFields(state);
         dispatch({ name: 'errors', value: updatedErrors });
 
@@ -68,9 +68,12 @@ const ContactForm = () => {
 
         if (Object.values(updatedErrors).every((error) => error === '')) {
             // eslint-disable-next-line no-alert
-            window.alert('brawo');
+            window.alert('thanks for message');
         }
     };
+
+
+    // jeszzcze moge uproscic kod przechadzac po obikecie init i na tej podstawie tworzyc labele  z inputami
     return (
         <form noValidate onSubmit={submit}>
             <div>
