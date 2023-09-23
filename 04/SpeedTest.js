@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import useRandomItem from './hook';
 
 const SpeedTest = () => {
@@ -19,9 +19,10 @@ const SpeedTest = () => {
 
     const [inputValue, setInputValue] = useState('');
 
-    const capturing = (e) => {
-        const newValue = e.target.value;
-        setInputValue(newValue);
+    const inputRef = useRef(null);
+
+    const capturing = () => {
+        setInputValue(inputRef.current.value);
     };
 
     useEffect(() => {
@@ -39,7 +40,7 @@ const SpeedTest = () => {
     const plainSeconds = Math.floor(seconds / 10);
 
     useEffect(() => {
-        if (inputValue === word) {
+        if (inputRef.current.value === word) {
             regenerateWord();
             setCorrectWordsCount((count) => count + 1);
             setInputValue('');
@@ -59,7 +60,7 @@ const SpeedTest = () => {
     return (
         <div>
             <h1>{word}</h1>
-            <input onFocus={appRunning} value={inputValue} onChange={capturing} />
+            <input onFocus={appRunning} value={inputValue} onChange={capturing} ref={inputRef} />
             <p>
                 Czas: {plainSeconds}:{milliseconds}
             </p>
