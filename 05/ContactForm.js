@@ -74,7 +74,7 @@ const ContactForm = () => {
             }
         }
 
-        return errors;
+        return { errors, mainError };
     };
 
     const reducer = (state, { name, value, action = 'change' }) => {
@@ -99,6 +99,9 @@ const ContactForm = () => {
     const submit = (e) => {
         e.preventDefault();
 
+        console.log(errors);
+        console.log(mainError);
+
         const isAnyFieldEmpty = initFields.some((field) => {
             const value = state[field.name];
             return field.required && value.trim() === '';
@@ -107,6 +110,7 @@ const ContactForm = () => {
             dispatch({ name: 'mainError', value: 'Wszystkie pola muszą być wypełnione' });
         } else {
             const updatedErrors = validateFields(state);
+            dispatch({ name: 'errors', value: updatedErrors });
             if (Object.values(updatedErrors).every((error) => (error = ''))) {
                 console.log('form wyslany');
                 dispatch({ action: 'reset' });
