@@ -1,6 +1,5 @@
 /* eslint-disable no-console */
 import React, { useReducer, useRef } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import emailjs from '@emailjs/browser';
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from './account';
 
@@ -53,13 +52,23 @@ const ContactForm = () => {
         return errors;
     };
 
-    const reducer = (state, { name, value }) => {
-        // tutaj tworze obiekt kopiujac stary state i dodaje aktualizuje pola o nowe value(jesli sie zmienia, a  wiemy ze sie zmienai bo onChange wywolalo wlasnie te  funkcje)
-        const newState = { ...state, [name]: value };
-        // tutaj waliduje pola wg potrzeb w validateFields i jednoczesnie dodaje nowy klucz errors do state ktory moze przechowywac bledy walidacji
-        newState.errors = validateFields(newState);
-        // zwracam newState, ktory bedzie state'm dla useReducera v
-        return newState;
+    
+    // eslint-disable-next-line consistent-return
+    const reducer = (state, { name, value, action = 'change' }) => {
+        switch (action) {
+        case 'change': {
+            const newState = { ...state, [name]: value };
+            newState.errors = validateFields(newState);
+            return newState;
+        }
+        case 'reset': {
+            return init
+        }
+        // eslint wymusza default...
+        default: {
+            console.log('default');
+        }
+        }
     };
 
     const [state, dispatch] = useReducer(reducer, init);
@@ -70,10 +79,6 @@ const ContactForm = () => {
 
         const updatedErrors = validateFields(state);
         dispatch({ name: 'errors', value: updatedErrors });
-
-        // jak zobaczyc stan state po kliknieciu pierwszego submita, bo jak klikne drugi raz to juz bede mial ten pierwszy zaktualizowany stan, ale ja chce w momencie pierwszego kliklniecia
-        // wiem ze juz raz o to pytalem ale nie pamietam, wiem ze to sie wywolywalo przez funkcje
-        // setTimeout(() => console.log(state), 100);
 
         if (Object.values(updatedErrors).every((error) => error === '')) {
             emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
@@ -88,14 +93,7 @@ const ContactForm = () => {
             // eslint-disable-next-line no-alert
             window.alert('thanks for message');
 
-            // powinno sie czyscic jednym dispatchem ktory przyjmuje obiekt z pustymi wartosciami.. ale sie nie czysci
-            // dispatch(init);
-
-            dispatch({ name: 'firstName', value: '' });
-            dispatch({ name: 'email', value: '' });
-            dispatch({ name: 'phone', value: '' });
-            dispatch({ name: 'subject', value: '' });
-            dispatch({ name: 'textArea', value: '' });
+            dispatch({ action: 'reset' });
         }
     };
 
