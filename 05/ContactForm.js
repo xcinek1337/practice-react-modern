@@ -54,6 +54,7 @@ const ContactForm = () => {
 
     const validateFields = (name, value) => {
         const errors = {};
+        const mainError = {};
 
         const field = initFields.find((field) => field.name === name);
 
@@ -81,7 +82,6 @@ const ContactForm = () => {
             case 'change': {
                 const newState = { ...state, [name]: value };
                 newState.errors = validateFields(newState);
-                // newState.errors = { ...newState.errors, [name]: validateFields(name, value) };
                 return newState;
             }
             case 'reset': {
@@ -94,34 +94,26 @@ const ContactForm = () => {
     };
 
     const [state, dispatch] = useReducer(reducer, emptyFields);
-    const { firstName, email, errors, phone, subject, textArea } = state;
+    const { firstName, email, errors, phone, mainError, subject, textArea } = state;
 
     const submit = (e) => {
         e.preventDefault();
 
-    
-        const updatedErrors = validateFields(state);
-
-        if (Object.values(updatedErrors).every((error) => error === '')) {
-      
-            // emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY).then(
-            //     (result) => {
-            //         console.log(result.text);
-            //         console.log('message sent');
-            //     },
-            //     (error) => {
-            //         console.log(error.text);
-            //     },
-            // );
-            // eslint-disable-next-line no-alert
-         
-            console.log(`formularz wysłany`);
-
-            // dispatch({ action: 'reset' });
+        const isAnyFieldEmpty = initFields.some((field) => {
+            const value = state[field.name];
+            return field.required && value.trim() === '';
+        });
+        if (isAnyFieldEmpty) {
+            dispatch({ name: 'mainError', value: 'Wszystkie pola muszą być wypełnione' });
         } else {
-        
-            console.log('else');
-            dispatch({ name: 'errors', value: updatedErrors });
+            const updatedErrors = validateFields(state);
+            if (Object.values(updatedErrors).every((error) => (error = ''))) {
+                console.log('form wyslany');
+                dispatch({ action: 'reset' });
+            } else {
+                console.log('else');
+                dispatch({ name: 'errors', value: updatedErrors });
+            }
         }
     };
 
@@ -155,6 +147,7 @@ const ContactForm = () => {
                 </div>
             ))}
             <input type="submit" />
+            {mainError && <p style={{color: 'gold'}} >{mainError}</p>}
         </form>
     );
 };
