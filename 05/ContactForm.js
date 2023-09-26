@@ -16,18 +16,18 @@ const ContactForm = () => {
             name: 'email',
             label: 'Email',
             required: true,
-            pattern: '^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$',
+            pattern: '^[a-zA-Z0-9._%+-]+@[a-zAZ0-9.-]+\\.[a-zA-Z]{2,4}$',
         },
         {
             name: 'phone',
             type: 'number',
             label: 'Numer Telefonu',
             required: false,
-            pattern: '/^d{9}$',
+            pattern: '^[0-9]{9}$',
         },
         {
             name: 'subject',
-            label: 'Temat wiadomośći',
+            label: 'Temat wiadomości',
             required: true,
         },
         {
@@ -52,11 +52,9 @@ const ContactForm = () => {
         },
     };
 
-    const validateFields = (name, value) => {
-        const errors = {};
-        const mainError = {};
-
+    const validateField = (name, value) => {
         const field = initFields.find((field) => field.name === name);
+        const errors = { ...emptyFields.errors };
 
         if (!field) {
             return errors;
@@ -74,15 +72,14 @@ const ContactForm = () => {
             }
         }
 
-        return { errors, mainError };
+        return errors;
     };
 
     const reducer = (state, { name, value, action = 'change' }) => {
         switch (action) {
             case 'change': {
                 const newState = { ...state, [name]: value };
-                newState.errors = validateFields(newState);
-                return newState;
+                return { ...newState, errors: validateField(name, value) };
             }
             case 'reset': {
                 return emptyFields;
@@ -98,26 +95,20 @@ const ContactForm = () => {
 
     const submit = (e) => {
         e.preventDefault();
+        const updatedErrors = { ...emptyFields.errors };
 
-        console.log(errors);
-        console.log(mainError);
+        for (const field of initFields) {
+            const fieldErrors = validateField(field.name, state[field.name]);
+            updatedErrors[field.name] = fieldErrors[field.name];
+        }
 
-        const isAnyFieldEmpty = initFields.some((field) => {
-            const value = state[field.name];
-            return field.required && value.trim() === '';
-        });
-        if (isAnyFieldEmpty) {
-            dispatch({ name: 'mainError', value: 'Wszystkie pola muszą być wypełnione' });
+        if (Object.values(updatedErrors).every((error) => error === '')) {
+            dispatch({ action: 'reset' });
         } else {
-            const updatedErrors = validateFields(state);
-            dispatch({ name: 'errors', value: updatedErrors });
-            if (Object.values(updatedErrors).every((error) => (error = ''))) {
-                console.log('form wyslany');
-                dispatch({ action: 'reset' });
-            } else {
-                console.log('else');
-                dispatch({ name: 'errors', value: updatedErrors });
-            }
+            dispatch({
+                name: 'mainError',
+                value: 'Upewnij się, że wszystkie wymagane pola są wypełnione.',
+            });
         }
     };
 
@@ -134,7 +125,9 @@ const ContactForm = () => {
                                 name={field.name}
                                 required={field.required}
                                 value={state[field.name]}
-                                onChange={(e) => dispatch(e.target)}
+                                onChange={(e) =>
+                                    dispatch({ name: field.name, value: e.target.value })
+                                }
                             />
                         ) : (
                             <input
@@ -143,15 +136,19 @@ const ContactForm = () => {
                                 type={field.type}
                                 required={field.required}
                                 value={state[field.name]}
-                                onChange={(e) => dispatch(e.target)}
+                                onChange={(e) =>
+                                    dispatch({ name: field.name, value: e.target.value })
+                                }
                             />
                         )}
                     </label>
-                    {errors[field.name] && <p style={{ color: 'red' }}>{errors[field.name]}</p>}
+                    {state.errors[field.name] && (
+                        <p style={{ color: 'red' }}>{state.errors[field.name]}</p>
+                    )}
                 </div>
             ))}
+            {mainError && <p style={{ color: 'red' }}>{mainError}</p>}
             <input type="submit" />
-            {mainError && <p style={{color: 'gold'}} >{mainError}</p>}
         </form>
     );
 };
